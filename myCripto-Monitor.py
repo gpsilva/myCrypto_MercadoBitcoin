@@ -14,7 +14,7 @@ from utils.requisição import loop
 locale.setlocale(locale.LC_MONETARY, "pt_BR.UTF-8")
 
 logo("Mercado Bitcoin")
-print(Panel.fit("Desenvolvido por: Vinícius Azevedo" ))
+print(Panel.fit("Customizado por: Ultraman@gpsilva" ))
 
 # Setando valores base para as lista
 list_btc = [1.00]
@@ -109,23 +109,23 @@ while True:
         table.add_row("XRP", str(xrp), data_hora, "=", "%", style="yellow")
         console = Console()
 
-    # Monitoramento PAXG
-    if list_paxg[-1] > list_paxg[-2]:
-        if list_paxg[-2] == 1.00:
-            response = "Calculando.."
-        else:
-            response = str(calc_porc(list_paxg[-2], list_paxg[-1]))
-        table.add_row("PAXG", str(paxg), data_hora,"⬆", response, style="green")
-        console = Console()
-
-    elif list_paxg[-1] < list_paxg[-2]:
-        response = str(calc_porc(list_paxg[-2], list_paxg[-1]))
-        table.add_row("PAXG", str(paxg), data_hora, "⬇", response, style="red")
-        console = Console()
-
-    else:
-        table.add_row("PAXG", str(paxg), data_hora, "=", "%", style="yellow")
-        console = Console()
+#    # Monitoramento PAXG
+#    if list_paxg[-1] > list_paxg[-2]:
+#        if list_paxg[-2] == 1.00:
+#            response = "Calculando.."
+#        else:
+#            response = str(calc_porc(list_paxg[-2], list_paxg[-1]))
+#        table.add_row("PAXG", str(paxg), data_hora,"⬆", response, style="green")
+#        console = Console()
+#
+#    elif list_paxg[-1] < list_paxg[-2]:
+#        response = str(calc_porc(list_paxg[-2], list_paxg[-1]))
+#        table.add_row("PAXG", str(paxg), data_hora, "⬇", response, style="red")
+#        console = Console()
+#
+#    else:
+#        table.add_row("PAXG", str(paxg), data_hora, "=", "%", style="yellow")
+#        console = Console()
 
     # Monitoramento USDC
     if list_usdc[-1] > list_usdc[-2]:
